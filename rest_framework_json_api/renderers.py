@@ -483,6 +483,7 @@ class JsonApiMixin(object):
             links.update(field_links)
 
             linked[resource_type].append(linked_obj)
+            linked.update(converted.pop('linked', {}))
 
         if is_related_many(field):
             linked_ids[field_name] = obj_ids
