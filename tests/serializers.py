@@ -51,6 +51,10 @@ class NestedPostSerializer(PostSerializer):
     comments = MinimalCommentSerializer(many=True)
 
 
+class DoubleNestedPersonSerializer(MaximalPersonSerializer):
+    favorite_post = NestedPostSerializer()
+
+
 class PkCommentSerializer(CommentSerializer):
     post = relations.PrimaryKeyRelatedField(queryset=models.Post.objects)
 

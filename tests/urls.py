@@ -17,6 +17,10 @@ router.register("pk-comments", views.PkCommentViewSet, base_name="pk-comment")
 router.register(
     "people-full", views.MaximalPersonViewSet, base_name="people-full")
 router.register(
+    "double-nested-people",
+    views.DoubleNestedPersonViewSet,
+    base_name="double-nested-people")
+router.register(
     "pk-people-full", views.PkMaximalPersonViewSet, base_name="pk-people-full")
 
 urlpatterns = router.urls
