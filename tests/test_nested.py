@@ -234,7 +234,4 @@ def test_double_nested_linked(client):
 
     response = client.get(reverse("double-nested-people-list"))
 
-    from betterprint import pprint
-    pprint(response)
-
     assert response.content == dump_json(results)
